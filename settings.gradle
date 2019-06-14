@@ -1,1 +1,1 @@
-include ':uiza_sdk_player_4_0_8', ':uiza_sdk_player_4_0_8_cast'
+include ':uiza_sdk_player_4_0_8', ':uiza_sdk_player_4_0_8_cast', ':uiza_sdk_player_4_0_8_ads'
