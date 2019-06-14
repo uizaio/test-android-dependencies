@@ -1,1 +1,1 @@
-include ':app'
+include ':uiza_sdk_player_4_0_8', ':uiza_sdk_player_4_0_8_cast'
