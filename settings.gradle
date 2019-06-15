@@ -1,1 +1,1 @@
-include ':uiza_sdk_player_4_0_8', ':uiza_sdk_player_4_0_8_cast', ':uiza_sdk_player_4_0_8_ads', ':uiza_sdk_player_4_0_8_cast_ads', ':uiza_sdk_player_3_2_5', ':uiza_sdk_player_3_0_3'
+include ':uiza_sdk_player_4_0_8', ':uiza_sdk_player_4_0_8_cast', ':uiza_sdk_player_4_0_8_ads', ':uiza_sdk_player_4_0_8_cast_ads', ':uiza_sdk_player_3_2_5', ':uiza_sdk_player_3_0_3', ':uiza_sdk_player_2_7_3', ':uiza_sdk_player_2_4_0'
