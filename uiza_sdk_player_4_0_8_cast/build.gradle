@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.uizaio.uiza-android-sdk-player:uizabase:4.0.8'
+    // uiza
     implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.8'
 
     // cast

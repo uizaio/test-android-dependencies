@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "uiza.test.android.uiza_sdk_player_4_0_8_cast_ads"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -37,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.uizaio.uiza-android-sdk-player:uizabase:4.0.8'
+    // uiza
     implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.8'
 
     // cast
