@@ -1,22 +1,23 @@
-package uiza.test.android.uiza_sdk_player_3_2_5.sample;
+package uiza.test.android.uiza_sdk_player_3_0_3.sample;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 import com.daimajia.androidanimations.library.Techniques;
-import uiza.test.android.uiza_sdk_player_3_2_5.R;
+import uiza.test.android.uiza_sdk_player_3_0_3.R;
 import uizacoresdk.interfaces.UZCallback;
 import uizacoresdk.interfaces.UZItemClick;
 import uizacoresdk.util.UZUtil;
 import uizacoresdk.view.rl.video.UZVideo;
+import vn.uiza.core.base.BaseActivity;
 import vn.uiza.core.common.Constants;
 import vn.uiza.core.exception.UZException;
 import vn.uiza.core.utilities.LAnimationUtil;
 import vn.uiza.core.utilities.LDialogUtil;
+import vn.uiza.core.utilities.LLog;
 import vn.uiza.core.utilities.LScreenUtil;
 import vn.uiza.core.utilities.LUIUtil;
 import vn.uiza.restapi.uiza.model.v3.linkplay.getlinkplay.ResultGetLinkPlay;
@@ -27,17 +28,29 @@ import vn.uiza.views.LToast;
  * Created by minh.nt on 14/6/2019.
  */
 
-public class CustomSkinXMLActivity extends AppCompatActivity implements UZCallback, UZItemClick {
+public class CustomSkinXMLActivity extends BaseActivity implements UZCallback, UZItemClick {
     private UZVideo uzVideo;
-    private Activity activity;
+
+    @Override
+    protected boolean setFullScreen() {
+        return false;
+    }
+
+    @Override
+    protected String setTag() {
+        return "TAG" + getClass().getSimpleName();
+    }
+
+    @Override
+    protected int setLayoutResourceId() {
+        return R.layout.activity_uiza_custom_skin_xml;
+    }
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         UZUtil.setCasty(this);
-        activity = this;
         UZUtil.setCurrentPlayerId(R.layout.uiza_controller_skin_custom_main);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_uiza_custom_skin_xml);
         uzVideo = findViewById(R.id.uiza_video);
         uzVideo.addUZCallback(this);
         uzVideo.addItemClick(this);
@@ -92,9 +105,28 @@ public class CustomSkinXMLActivity extends AppCompatActivity implements UZCallba
     }
 
     @Override
+    public void onStart() {
+        super.onStart();
+        uzVideo.onStart();
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        uzVideo.onStop();
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        uzVideo.onActivityResult(resultCode, resultCode, data);
-        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == Constants.CODE_DRAW_OVER_OTHER_APP_PERMISSION) {
+            if (resultCode == Activity.RESULT_OK) {
+                uzVideo.initializePiP();
+            } else {
+                LToast.show(activity, "Draw over other app permission not available");
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
     @Override
@@ -113,8 +145,8 @@ public class CustomSkinXMLActivity extends AppCompatActivity implements UZCallba
     }
 
     @Override
-    public void onStateMiniPlayer(boolean isInitMiniPlayerSuccess) {
-        if (isInitMiniPlayerSuccess) {
+    public void onClickPipVideoInitSuccess(boolean isInitSuccess) {
+        if (isInitSuccess) {
             onBackPressed();
         }
     }
@@ -133,6 +165,7 @@ public class CustomSkinXMLActivity extends AppCompatActivity implements UZCallba
         if (e == null) {
             return;
         }
+        LLog.e(TAG, "onError: " + e.toString());
         LDialogUtil.showDialog1(activity, e.getMessage(), new LDialogUtil.Callback1() {
             @Override
             public void onClick1() {

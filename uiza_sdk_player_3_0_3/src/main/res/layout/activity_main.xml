@@ -9,9 +9,9 @@
     tools:context=".sample.MainActivity">
 
     <Button
-        android:id="@+id/bt_test_no_cast_no_ad"
+        android:id="@+id/bt_test_cast_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="V4.0.8 No chrome Cast and no ads" />
+        android:text="V3.0.3 Use Chrome Cast and Ads" />
 
 </LinearLayout>

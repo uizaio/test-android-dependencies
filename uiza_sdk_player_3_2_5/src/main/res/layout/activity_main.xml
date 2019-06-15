@@ -12,6 +12,6 @@
         android:id="@+id/bt_test_cast_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Test V3.2.5 Use Chrome Cast and Ads" />
+        android:text="V3.2.5 Use Chrome Cast and Ads" />
 
 </LinearLayout>
