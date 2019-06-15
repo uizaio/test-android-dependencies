@@ -39,6 +39,7 @@ dependencies {
     implementation 'com.github.uizaio.uiza-android-sdk-player:uizabase:4.0.8'
     implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.8'
 
+    // exo
     implementation 'com.google.android.exoplayer:exoplayer:2.9.5'
     implementation 'com.google.android.exoplayer:exoplayer-dash:2.9.5'
     implementation 'com.google.android.exoplayer:exoplayer-ui:2.9.5'
