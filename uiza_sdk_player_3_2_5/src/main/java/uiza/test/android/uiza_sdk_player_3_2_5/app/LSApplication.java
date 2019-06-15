@@ -14,7 +14,6 @@ public class LSApplication extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
-        Constants.setDebugMode(true);
         UZUtil.initWorkspace(this, DF_DOMAIN_API, DF_TOKEN, DF_APP_ID);
     }
 }

@@ -26,9 +26,6 @@ import vn.uiza.restapi.uiza.model.v3.linkplay.getlinkplay.ResultGetLinkPlay;
 import vn.uiza.restapi.uiza.model.v3.metadata.getdetailofmetadata.Data;
 import vn.uiza.views.LToast;
 
-/**
- * Created by loitp on 7/16/2018.
- */
 
 public class CustomSkinXMLActivity extends BaseActivity implements UZCallback {
     private UZVideo uzVideo;

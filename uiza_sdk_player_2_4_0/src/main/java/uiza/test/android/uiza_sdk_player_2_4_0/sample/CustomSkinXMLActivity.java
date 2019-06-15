@@ -24,9 +24,6 @@ import vn.uiza.uzv3.view.rl.video.UZCallback;
 import vn.uiza.uzv3.view.rl.video.UZVideo;
 import vn.uiza.views.LToast;
 
-/**
- * Created by loitp on 7/16/2018.
- */
 
 public class CustomSkinXMLActivity extends BaseActivity implements UZCallback {
     private UZVideo uzVideo;

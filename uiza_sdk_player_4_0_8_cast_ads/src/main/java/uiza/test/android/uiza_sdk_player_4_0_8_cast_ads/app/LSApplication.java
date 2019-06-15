@@ -14,7 +14,6 @@ public class LSApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Constants.setDebugMode(true);
         int apiVersion = Constants.API_VERSION_4;
         UZUtil.initWorkspace(this, apiVersion, DF_DOMAIN_API, DF_TOKEN, DF_APP_ID, Constants.ENVIRONMENT_PROD, uizacoresdk.R.layout.uz_player_skin_0);
     }
