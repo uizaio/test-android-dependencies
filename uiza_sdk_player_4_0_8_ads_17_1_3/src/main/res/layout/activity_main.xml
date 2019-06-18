@@ -12,6 +12,6 @@
         android:id="@+id/bt_test_ad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="V4.0.8 IMA Ads" />
+        android:text="V4.0.9 IMA Ads" />
 
 </LinearLayout>

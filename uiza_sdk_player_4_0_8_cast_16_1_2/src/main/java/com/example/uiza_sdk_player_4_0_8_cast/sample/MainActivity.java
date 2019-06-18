@@ -16,11 +16,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        findViewById(R.id.bt_no_cast).setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, CustomSkinXMLActivity.class);
-            intent.putExtra(Constants.KEY_UIZA_ENTITY_ID, LSApplication.entityIdDefaultVOD);
-            startActivity(intent);
-        });
 
         findViewById(R.id.bt_cast).setOnClickListener(v -> {
             Intent intent = new Intent(MainActivity.this, CustomSkinXMLCastActivity.class);

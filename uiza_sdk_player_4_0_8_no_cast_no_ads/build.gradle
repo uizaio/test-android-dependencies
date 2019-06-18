@@ -38,7 +38,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     // uiza
-    implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.8'
+    implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.9'
 
     // exo
     implementation 'com.google.android.exoplayer:exoplayer:2.9.5'

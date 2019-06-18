@@ -12,11 +12,6 @@
         android:id="@+id/bt_cast"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1. V4.0.8 Use Chrome Cast" />
+        android:text="V4.0.9 Use Chrome Cast" />
 
-    <Button
-        android:id="@+id/bt_no_cast"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2. V4.0.8 No chrome Cast" />
 </LinearLayout>
