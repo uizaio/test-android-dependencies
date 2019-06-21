@@ -34,7 +34,7 @@ android {
 
 dependencies {
     // uiza
-    implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.9'
+    implementation 'com.github.uizaio.uiza-android-sdk-player:uizacoresdk:4.0.11'
 
     // exo
     implementation 'com.google.android.exoplayer:exoplayer:2.9.5'
