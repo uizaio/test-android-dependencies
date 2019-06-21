@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uiza.test.android.uiza_sdk_4_0_8_cast_16_1_2_ads_15_0_0">
+
+    <application
+        android:name="uiza.test.android.uiza_sdk_4_0_8_cast_16_1_2_ads_15_0_0.app.LSApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="uiza.test.android.uiza_sdk_4_0_8_cast_16_1_2_ads_15_0_0.sample.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uiza.test.android.uiza_sdk_4_0_8_cast_16_1_2_ads_15_0_0.sample.CustomSkinXMLCastActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"/>
+    </application>
+
+</manifest>
